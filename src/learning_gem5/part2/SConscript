@@ -28,16 +28,19 @@
 Import('*')
 
 SimObject('SimpleObject.py', sim_objects=['SimpleObject'])
-SimObject('HelloObject.py', sim_objects=['HelloObject', 'GoodbyeObject'])
+# SimObject('HelloObject.py', sim_objects=['HelloObject', 'GoodbyeObject'])
+SimObject('HelloObject.py', sim_objects=['HelloObject'])
 SimObject('SimpleMemobj.py', sim_objects=['SimpleMemobj'])
 SimObject('SimpleCache.py', sim_objects=['SimpleCache'])
 
 Source('simple_object.cc')
 Source('hello_object.cc')
-Source('goodbye_object.cc')
+#Source('goodbye_object.cc')
 Source('simple_memobj.cc')
 Source('simple_cache.cc')
 
-DebugFlag('HelloExample', "For Learning gem5 Part 2. Simple example debug flag")
+#DebugFlag('HelloExample', "For Learning gem5 Part 2. Simple example debug flag")
+# Creates a new debug flag that can then be used in the SimObject
+DebugFlag('HelloExample')
 DebugFlag('SimpleMemobj', "For Learning gem5 Part 2.")
 DebugFlag('SimpleCache', "For Learning gem5 Part 2.")
